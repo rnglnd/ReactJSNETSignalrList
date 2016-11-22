@@ -32,23 +32,24 @@
         });
     },
     render() {
-        if (this.state.showEdit) {
             return (
                 <div>
-                    <PeopleEdit id={this.state.id} title={this.state.title} name={this.state.name} />
-                </div>
-            );
-        } else {
-            return (
-                <div>
-                    <PeopleList title={this.state.title} name={this.state.name} />
-                    <button className="btn btn-default" onClick={this.onClick}>Edit</button>
+                    {
+                        this.state.showEdit
+                        ? <div>
+                            <PeopleEdit id={this.state.id} title={this.state.title} name={this.state.name} />
+                        </div>
+                        : <div>
+                            <PeopleList title={this.state.title} name={this.state.name} />
+                            <button className="btn btn-default" onClick={this.onClick}>Edit</button>
+                        </div>
+                    }
+                    <br />
                     <p>Where {this.state.name} lives:</p>
                     <PeopleMap initialZoom={this.state.initialZoom} mapCenterLat={this.state.mapCenterLat} mapCenterLng={this.state.mapCenterLng} />
-                </div>
+                    </div>
             );
         }
-    }
 });
 
 ReactDOM.render(
