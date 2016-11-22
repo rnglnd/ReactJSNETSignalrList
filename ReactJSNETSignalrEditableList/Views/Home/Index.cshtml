@@ -1,0 +1,15 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<h1>ReactJS.NET</h1>
+<p class="lead">This is a test with ReactJS.NET and Signalr.</p>
+<br />
+<p>Please click a name below:</p>
+
+<div id="content">
+</div>
+
+@section scripts{
+    <script src="@Url.Content("/App/Containers/IndexView.jsx")"></script>
+}
