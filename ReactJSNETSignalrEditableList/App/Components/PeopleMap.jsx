@@ -1,10 +1,11 @@
 ﻿const PeopleMap = React.createClass({  
     componentDidMount() {
-        var mapOptions = {
+        let mapOptions = {
             center: this.getCenter(),
             zoom: this.props.initialZoom
-        },
-        map = new google.maps.Map(document.getElementById('map'), mapOptions);
+        };
+
+        let map = new google.maps.Map(document.getElementById('map'), mapOptions);
 
         this.setState({ map: map });
     },
