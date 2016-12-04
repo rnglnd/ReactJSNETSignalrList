@@ -1,4 +1,4 @@
-﻿var PeopleList = React.createClass({
+﻿const PeopleList = React.createClass({
     render() {
         return (
             <dl>

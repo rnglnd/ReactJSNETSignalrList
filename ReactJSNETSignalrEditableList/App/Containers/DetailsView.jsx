@@ -1,7 +1,7 @@
-﻿var DetailsView = React.createClass({
+﻿const DetailsView = React.createClass({
     getInitialState() {
-        var url = window.location.href;
-        var id = url.substring(url.lastIndexOf('/') + 1);
+        let url = window.location.href;
+        let id = url.substring(url.lastIndexOf('/') + 1);
         return {
             id: id,
             title: "",
@@ -24,7 +24,7 @@
         this.setState({ showEdit: true });
     },
     componentWillMount: function () {
-        var id = this.state.id;
+        let id = this.state.id;
         $.connection.peopleHub.client.setPerson = this.setPerson;
 
         $.connection.hub.start().done(function () {

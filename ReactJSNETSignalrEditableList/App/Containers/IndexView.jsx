@@ -1,4 +1,4 @@
-﻿var IndexView = React.createClass({
+﻿const IndexView = React.createClass({
     getInitialState() {
         return {
             data: [],

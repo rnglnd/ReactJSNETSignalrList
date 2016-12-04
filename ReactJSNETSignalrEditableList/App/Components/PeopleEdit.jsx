@@ -1,4 +1,4 @@
-﻿var PeopleEdit = React.createClass({
+﻿const PeopleEdit = React.createClass({
     handleSubmit() {
         var data = {
             Id: this.refs.id.value,

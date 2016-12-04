@@ -1,4 +1,4 @@
-﻿var PeopleTable = React.createClass({
+﻿const PeopleTable = React.createClass({
     render() {
         return (
             <div className='table'>
@@ -15,7 +15,7 @@
                     </thead>
                     <tbody>
                         {this.props.data.map(function (person) {
-                            var url = "/Home/Details/" + person.Id;
+                            let url = "/Home/Details/" + person.Id;
                             return (
                                 <tr key={person.Id}>
                                     <td>

@@ -1,4 +1,4 @@
-﻿var PeopleMap = React.createClass({  
+﻿const PeopleMap = React.createClass({  
     componentDidMount() {
         var mapOptions = {
             center: this.getCenter(),
@@ -12,12 +12,12 @@
         return new google.maps.LatLng(this.props.mapCenterLat, this.props.mapCenterLng);
     },
     componentDidUpdate() {
-        var map = this.state.map;
+        let map = this.state.map;
 
         map.panTo(this.getCenter());
     },
     render() {
-        var style = {
+        let style = {
             width: '100%',
             height: '500px'
         };
